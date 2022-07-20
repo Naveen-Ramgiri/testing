@@ -1,0 +1,39 @@
+@import '../../../Sass/Base/variables';
+
+.product {
+
+    &__image img {
+        height: 280px;
+        width: 100%;
+    }
+
+    &__card {
+        margin-bottom: $margin-lv-4;
+    }
+
+    &__title {
+        color: $product-text;
+        font-size: 16px;
+        font-weight: 600;
+        height: 18px;
+        overflow: hidden;
+
+        &:hover {
+            text-decoration: none;
+            color: $product-text;
+        }
+    }
+
+    &__price {
+        color: $product-text;
+        font-size: 16px;
+        margin-bottom: $margin-lv-2;
+    }
+}
+
+@include responsive(medium) {
+
+    .product__image img {
+        height: 230px;
+    }
+}

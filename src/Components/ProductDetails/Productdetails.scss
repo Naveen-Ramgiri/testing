@@ -1,0 +1,242 @@
+@import '../../Sass/Base/variables';
+
+.productdetails {
+    margin: $margin-lv-4 * 4 + $margin-lv-1 0 $margin-lv-5 0;
+
+    &__left {
+        img {
+            width: 100%;
+        }
+
+        &-desc {
+            position: relative;
+
+            h2 {
+                font-size: 36px;
+                color: $product-text;
+                height: 80px;
+                overflow: hidden;
+            }
+
+            h5 {
+                font-size: 20px;
+                color: $product-text;
+                font-weight: 600;
+                margin: $margin-lv-4 0;
+            }
+
+            p {
+                color: $product-text;
+                font-size: 16px;
+                padding-bottom: $padding-lv-4;
+            }
+
+            P::after {
+                content: "";
+                background-color: $primary-color;
+                width: 15%;
+                position: absolute;
+                height: 5px;
+                bottom: 0%;
+                left: 0;
+            }
+
+        }
+    }
+
+    &__right {
+        padding-left: $padding-lv-7;
+
+        &-title {
+            font-size: 36px;
+            color: $product-text;
+        }
+
+        &-price {
+            color: $product-text;
+            font-size: 20px;
+        }
+
+        &-rating {
+            font-size: 14px;
+            color: $product-text;
+        }
+
+        &-description {
+            color: $product-text;
+            font-size: 12px;
+        }
+
+        &-space {
+            height: 100px;
+        }
+
+        &-icons {
+            display: flex;
+
+            p {
+                width: 50%;
+                font-size: 16px;
+                margin-top: $margin-lv-2;
+            }
+        }
+
+        h5 {
+            font-size: 20px;
+            color: $product-text;
+            margin-top: $margin-lv-4;
+            font-weight: 600;
+        }
+
+        hr {
+            margin: 10px 0;
+        }
+
+        &-colors img {
+            margin-right: $margin-lv-2;
+            border-radius: 6px;
+        }
+
+        &-colors span:nth-child(1) img {
+            background-color: #1aa7ec;
+        }
+
+        &-colors span:nth-child(2) img {
+            background-color: #ee6b6e;
+        }
+
+        &-colors span:nth-child(3) img {
+            background-color: #000;
+        }
+
+        &-colors span:nth-child(4) img {
+            background-color: #808080;
+            margin-right: 0;
+        }
+
+        &-size button {
+            border: 2px solid #91959C;
+            border-radius: 6px;
+            background-color: $teritary-color;
+            margin-right: $margin-lv-1;
+            padding: $padding-lv-1 $padding-lv-3;
+        }
+
+        &-quantity {
+            margin-bottom: $margin-lv-6;
+
+            button {
+                background: #EAEBEB;
+                border: 2px solid #B5B8BA;
+                border-radius: 50%;
+                height: 32px;
+                width: 32px;
+            }
+
+            input {
+                border: 2px solid #91959C;
+                border-radius: 8px;
+                width: 114px;
+                height: 40px;
+                text-align: center;
+                margin: 0 $margin-lv-2;
+            }
+
+        }
+
+        &-share ul {
+            display: flex;
+            margin-top: $margin-lv-3;
+
+            li {
+                list-style-type: none;
+                margin-right: $margin-lv-4;
+
+                a {
+                    text-decoration: none;
+                    color: $product-text;
+
+                    i {
+                        font-size: 20px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+}
+
+.productdetails__right-breadcrumb.mobile {
+    display: none;
+}
+
+@include responsive(phone) {
+
+    .productdetails {
+        margin: $margin-lv-4 0;
+    }
+
+    .productdetails__right {
+        padding-left: 0px;
+
+        .button-primary {
+            padding: $padding-lv-1 $padding-lv-5 * 4 - $padding-lv-1;
+        }
+
+        &-title {
+            font-size: 24px;
+        }
+
+        &-space {
+            height: 0;
+        }
+
+        &-quantity {
+            text-align: center;
+        }
+
+        .pro-details {
+            text-align: center;
+        }
+
+    }
+
+    .productdetails__left-desc {
+        h2 {
+            font-size: 24px;
+        }
+
+        h5 {
+            text-align: center;
+        }
+    }
+
+    .productdetails__right-share {
+        text-align: center;
+
+        ul {
+            display: inline-block;
+            width: 100%;
+
+            li {
+                display: inline-block;
+            }
+        }
+    }
+
+    .productdetails__right-colors img {
+        width: 64px;
+    }
+
+    .productdetails__right-breadcrumb {
+        display: none;
+    }
+
+    .productdetails__right-breadcrumb.mobile {
+        display: block !important;
+    }
+
+}

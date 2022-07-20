@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,mBAAmB,CAAE;EACjB,SAAS,EAAE,eAAe;EAC1B,KAAK,EAAE,OAAO;CACjB",
+    "sources": [
+        "Bread.scss"
+    ],
+    "names": [],
+    "file": "Bread.css"
+}
